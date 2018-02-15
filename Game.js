@@ -100,8 +100,8 @@ function paperButt() {
 function scissorButt() {
     playerChoice = 3;
     alert("You chose: Scissors");
-    result1 = playerChoice - oppChoice;
     oppChoose();
+    result1 = playerChoice - oppChoice;
     switch (result1) {
         case 2:
             result2 = 2;
