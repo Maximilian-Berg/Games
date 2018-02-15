@@ -16,10 +16,23 @@ function reset() {
     update();
 }
 
-function rockButt() {
-    playerChoice = 1;
+function evaluate() {
+    switch (result2) {
+        case 1:
+            alert("Hoora! You won!");
+            playerScore += 1;
+            break;
+        case 2:
+            alert("Oh no! You lost!");
+            oppScore += 1;
+            break;
+        case 3:
+            alert("Oh well, you tied.");
+    }
+}
+
+function oppChoose() {
     oppChoice = Math.floor(Math.random() * 3) + 1;
-    alert("You chose: Rock");
     switch (oppChoice) {
         case 1:
             alert("The computer chose: Rock");
@@ -30,6 +43,12 @@ function rockButt() {
         case 3:
             alert("The computer chose: Scissors");
     }
+}
+
+function rockButt() {
+    playerChoice = 1;
+    alert("You chose: Rock");
+    oppChoose();
     result1 = playerChoice - oppChoice;
     switch (result1) {
         case 0:
@@ -41,35 +60,14 @@ function rockButt() {
         case -2:
             result2 = 1;
     }
-    switch (result2) {
-        case 1:
-            alert("Hoora! You won!");
-            playerScore += 1;
-            break;
-        case 2:
-            alert("Oh no! You lost!");
-            oppScore += 1;
-            break;
-        case 3:
-            alert("Oh well, you tied.");
-    }
+    evaluate();
     update();
 }
 
 function paperButt() {
     playerChoice = 2;
-    oppChoice = Math.floor(Math.random() * 3) + 1;
     alert("You chose: Paper");
-    switch (oppChoice) {
-        case 1:
-            alert("The computer chose: Rock");
-            break;
-        case 2:
-            alert("The computer chose: Paper");
-            break;
-        case 3:
-            alert("The computer chose: Scissors");
-    }
+    oppChoose();
     result1 = playerChoice - oppChoice;
     switch (result1) {
         case 1:
@@ -81,36 +79,15 @@ function paperButt() {
         case -1:
             result2 = 2;
     }
-    switch (result2) {
-        case 1:
-            alert("Hoora! You won!");
-            playerScore += 1;
-            break;
-        case 2:
-            alert("Oh no! You lost!");
-            oppScore += 1;
-            break;
-        case 3:
-            alert("Oh well, you tied.");
-    }
+    evaluate();
     update();
 }
 
 function scissorButt() {
     playerChoice = 3;
-    oppChoice = Math.floor(Math.random() * 3) + 1;
     alert("You chose: Scissors");
-    switch (oppChoice) {
-        case 1:
-            alert("The computer chose: Rock");
-            break;
-        case 2:
-            alert("The computer chose: Paper");
-            break;
-        case 3:
-            alert("The computer chose: Scissors");
-    }
     result1 = playerChoice - oppChoice;
+    oppChoose();
     switch (result1) {
         case 2:
             result2 = 2;
@@ -121,17 +98,6 @@ function scissorButt() {
         case 0:
             result2 = 3;
     }
-    switch (result2) {
-        case 1:
-            alert("Hoora! You won!");
-            playerScore += 1;
-            break;
-        case 2:
-            alert("Oh no! You lost!");
-            oppScore += 1;
-            break;
-        case 3:
-            alert("Oh well, you tied.");
-    }
+    evaluate();
     update();
 }
