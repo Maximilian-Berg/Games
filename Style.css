@@ -8,9 +8,9 @@ h1 {
     font-size: 85px;
 }
 
-#Begin {
+.menue {
     text-align: center;
-    font-size: 100px;
+    font-size: 70px;
     color: #000000;
     background-color: #1481e0;
     font-family: "Comic Sans MS";
