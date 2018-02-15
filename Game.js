@@ -2,8 +2,12 @@ var playerChoice;
 var oppChoice;
 var result1;
 var result2;
+var playerScore = 0;
+var oppScore = 0;
 
 function update() {
+    document.getElementById("playerScore").innerHTML = playerScore;
+    document.getElementById("oppScore").innerHTML = oppScore;
 }
 
 function rockButt() {
@@ -34,13 +38,16 @@ function rockButt() {
     switch (result2) {
         case 1:
             alert("Hoora! You won!");
+            playerScore += 1;
             break;
         case 2:
             alert("Oh no! You lost!");
+            oppScore += 1;
             break;
         case 3:
             alert("Oh well, you tied.");
     }
+    update();
 }
 
 function paperButt() {
@@ -71,13 +78,16 @@ function paperButt() {
     switch (result2) {
         case 1:
             alert("Hoora! You won!");
+            playerScore += 1;
             break;
         case 2:
             alert("Oh no! You lost!");
+            oppScore += 1;
             break;
         case 3:
             alert("Oh well, you tied.");
     }
+    update();
 }
 
 function scissorButt() {
@@ -108,11 +118,14 @@ function scissorButt() {
     switch (result2) {
         case 1:
             alert("Hoora! You won!");
+            playerScore += 1;
             break;
         case 2:
             alert("Oh no! You lost!");
+            playerScore += 1;
             break;
         case 3:
             alert("Oh well, you tied.");
     }
+    update();
 }

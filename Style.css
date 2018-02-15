@@ -50,11 +50,13 @@ img {
 .name {
     color: #ffffff;
     display: inline;
+    font-size: 50px
 }
 
 .scoreDiv {
     display: inline;
 }
 
-#space {
+.space {
+    border: none;
 }
