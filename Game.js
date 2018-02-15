@@ -10,6 +10,12 @@ function update() {
     document.getElementById("oppScore").innerHTML = oppScore;
 }
 
+function reset() {
+    playerScore = 0
+    oppScore = 0
+    update();
+}
+
 function rockButt() {
     playerChoice = 1;
     oppChoice = Math.floor(Math.random() * 3) + 1;
@@ -122,7 +128,7 @@ function scissorButt() {
             break;
         case 2:
             alert("Oh no! You lost!");
-            playerScore += 1;
+            oppScore += 1;
             break;
         case 3:
             alert("Oh well, you tied.");

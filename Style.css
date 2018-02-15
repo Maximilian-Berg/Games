@@ -44,7 +44,7 @@ img {
     border: 5px solid #e2f700;
     font-family: "Comic Sans MS";
     color: #000000;
-    font-size: 20px
+    font-size: 20px;
 }
 
 .name {
@@ -59,4 +59,16 @@ img {
 
 .space {
     border: none;
+}
+
+#reset {
+    background-color: #1481e0;
+    border: 5px solid #e2f700;
+    font-family: "Comic Sans MS";
+    color: #000000;
+    font-size: 20px;
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 70px;
 }
