@@ -54,7 +54,8 @@ img {
 }
 
 .scoreDiv {
-    display: inline;
+    display: inline-block;
+    margin: 30px;
 }
 
 .space {
@@ -71,4 +72,26 @@ img {
     position: absolute;
     left: 20px;
     top: 70px;
+}
+
+.pointBar {
+    border: solid 3px #e2f700;
+    width: 200px;
+    display: inline-block;
+}
+
+#playerDiv {
+    margin-right: 50px;
+}
+
+#oppDiv {
+    margin-left: 50px;
+}
+
+#playerBar {
+    margin-right: 90px;
+}
+
+#oppBar {
+    margin-left: 60px;
 }

@@ -8,6 +8,11 @@ var oppScore = 0;
 function update() {
     document.getElementById("playerScore").innerHTML = playerScore;
     document.getElementById("oppScore").innerHTML = oppScore;
+    document.getElementById("playerBar").value = playerScore;
+    document.getElementById("oppBar").value = oppScore;
+}
+
+function check() {
 }
 
 function reset() {
