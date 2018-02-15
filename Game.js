@@ -4,6 +4,13 @@ var result1;
 var result2;
 var playerScore = 0;
 var oppScore = 0;
+var roundNumber = 10;
+
+function bar() {
+    roundNumber = parseInt(prompt("How many rounds would you like to play?"), 10);
+    document.getElementById("playerBar").max = roundNumber;
+    document.getElementById("oppBar").max = roundNumber;
+}
 
 function update() {
     document.getElementById("playerScore").innerHTML = playerScore;
@@ -13,10 +20,10 @@ function update() {
 }
 
 function check() {
-    if (playerScore == 10) {
+    if (playerScore == roundNumber) {
         alert("Good job! You won a round!");
         reset();
-    } else if (oppScore == 10) {
+    } else if (oppScore == roundNumber) {
         alert("Bad job! You lost a round!");
         reset();
     }

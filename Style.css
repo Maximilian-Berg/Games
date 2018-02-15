@@ -95,3 +95,15 @@ img {
 #oppBar {
     margin-left: 60px;
 }
+
+#change {
+    background-color: #1481e0;
+    border: 5px solid #e2f700;
+    font-family: "Comic Sans MS";
+    color: #000000;
+    font-size: 20px;
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 120px;
+}
