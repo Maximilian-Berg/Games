@@ -1,0 +1,60 @@
+body {
+    background-color: #160130;
+    text-align: center;
+}
+
+h1 {
+    color: #f77f00;
+    font-size: 85px;
+}
+
+#Begin {
+    text-align: center;
+    font-size: 100px;
+    color: #000000;
+    background-color: #1481e0;
+    font-family: "Comic Sans MS";
+    border: 20px solid #e2f700;
+    margin: auto;
+}
+
+img {
+    height: 300px;
+}
+
+.buttDiv {
+    display: inline;
+}
+
+#back {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.gameButt {
+    background-color: #1481e0;
+    border: 15px solid #e2f700;
+    margin: auto;
+}
+
+#backButt {
+    background-color: #1481e0;
+    border: 5px solid #e2f700;
+    font-family: "Comic Sans MS";
+    color: #000000;
+    font-size: 20px
+}
+
+.name {
+    color: #ffffff;
+    display: inline;
+}
+
+.scoreDiv {
+    display: inline;
+}
+
+#space {
+}
