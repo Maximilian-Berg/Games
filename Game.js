@@ -13,6 +13,13 @@ function update() {
 }
 
 function check() {
+    if (playerScore == 10) {
+        alert("Good job! You won a round!");
+        reset();
+    } else if (oppScore == 10) {
+        alert("Bad job! You lost a round!");
+        reset();
+    }
 }
 
 function reset() {
@@ -67,6 +74,7 @@ function rockButt() {
     }
     evaluate();
     update();
+    check();
 }
 
 function paperButt() {
@@ -86,6 +94,7 @@ function paperButt() {
     }
     evaluate();
     update();
+    check();
 }
 
 function scissorButt() {
@@ -105,4 +114,5 @@ function scissorButt() {
     }
     evaluate();
     update();
+    check();
 }
