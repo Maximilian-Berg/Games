@@ -123,3 +123,7 @@ img {
 #enemy {
     margin-left: 50px;
 }
+
+.healthBar {
+    display: block;
+}
