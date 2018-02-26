@@ -10,6 +10,7 @@ function bar() {
     roundNumber = parseInt(prompt("How many rounds would you like to play?"), 10);
     document.getElementById("playerBar").max = roundNumber;
     document.getElementById("oppBar").max = roundNumber;
+    check();
 }
 
 function update() {

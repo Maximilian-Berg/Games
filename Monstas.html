@@ -7,14 +7,16 @@
         <script src="monstas.js"></script>
     </head>
     <body>
+        <a href="Start.html" id="back"><button id="backButt"><--- Go Back</button></a>
         <h1>Monsta Fight</h1>
         <div id="main">
             <div class="entity" id="hero">
                 <img src="hero.png"/>
+                <progress class="healthBar" id="heroBar" max="2" value="2"></progress>
             </div>
             <div class="entity" id="enemy">
-                <img src="Anjanath.png"/>
-                <progress class="healthBar" id="enemyHealthBar" max="200" value="200"></progress>
+                    <img src="Anjanath.png"/>
+                    <progress class="healthBar" id="enemyBar" max="2" value="2"></progress>
             </div>
         </div>
     </body>
