@@ -128,3 +128,51 @@ img {
 #main {
     display: flex;
 }
+
+.named {
+    color: #ffffff;
+    font-size: 55px;
+    margin: 15px;
+    display: inline;
+}
+
+.healthBar {
+    border: 5px solid #f77f00;
+    width: 275px;
+}
+
+.health {
+    color: #ff0000;
+    font-size: 35px;
+    margin: 10px;
+}
+
+#heroHealth {
+    color: #07d800;
+}
+
+#Fight {
+    color: #ffdc42;
+    font-size: 85px;
+    margin-top: 50px;
+}
+
+#changeButton {
+    background-color: #1481e0;
+    border: 5px solid #e2f700;
+    font-family: "Comic Sans MS";
+    color: #000000;
+    font-size: 15px;
+    border-radius: 40%;
+    position: relative;
+    bottom: 9px;
+}
+
+#heroName {
+    text-align: center;
+    margin-left: 170px;
+}
+
+.entitySpace {
+    height: 15px;
+}
