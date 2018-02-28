@@ -4,12 +4,17 @@ var enemyHealth = 100;
 var playerAttack;
 var enemyChoice;
 var enemyAttack;
+var enemySuicide;
 
 function rename() {
     playerName = prompt("What is your name?");
     document.getElementById("heroName").innerHTML = playerName;
     document.getElementById("changeButton").style.display="none";
     document.getElementById("heroName").style.marginLeft="17px";
+    if (playerName == "John Cena") {
+        document.getElementById("heroImage").src="John Cena.png";
+        alert("The Monster starts to tremble in fear.")
+    }
 }
 
 function update() {
@@ -20,8 +25,16 @@ function update() {
 }
 
 function announce() {
+    if (playerName == "John Cena") {
+        alert("You unleash a devestating blow and deal "+playerAttack+" damage!")
+    } else {
     alert("You attacked and dealt " + playerAttack + " damage!");
-    if (enemyChoice == 1 || enemyChoice == 2) {
+    }
+    if (playerName == "John Cena" && enemySuicide == 0) {
+        alert("The Monster cowers in fear and does not attack.")
+    } else if (playerName == "John Cena" && enemySuicide == 1) {
+        alert("The Monster is too scared to properly attack and only deals 5 damage.")
+    } else if (enemyChoice == 1 || enemyChoice == 2) {
         alert("The enemy used Normal Attack and dealt " + enemyAttack + " damage!");
     } else {
         alert("The enemy used Special Attack and dealt " + enemyAttack + " damage!");
@@ -30,7 +43,14 @@ function announce() {
 
 function oppMove() {
     enemyChoice = Math.floor(Math.random() * 3) + 1;
-    if (enemyChoice == 1 || enemyChoice == 2) {
+    if (playerName == "John Cena") {
+        enemySuicide = Math.floor(Math.random() *2);
+        if (enemySuicide == 0) {
+            enemyAttack = 0;
+        } else {
+            enemyAttack = 5;
+        }
+    } else if (enemyChoice == 1 || enemyChoice == 2) {
         enemyAttack = Math.floor(Math.random() * 11) + 20;
     } else {
         enemyAttack = Math.floor(Math.random() * 50) + 1;
@@ -40,14 +60,20 @@ function oppMove() {
 function reset() {
     playerHealth = 100;
     enemyHealth = 100;
-    document.getElementById("heroName").innerHTML = "Hero";
+    playerName = "Hero";
+    document.getElementById("heroName").innerHTML = playerName;
+    document.getElementById("heroImage").src="hero.png";
     document.getElementById("changeButton").style.display="inline";
     document.getElementById("heroName").style.marginLeft="170px";
     update();
 }
  
 function normalAttack() {
+    if (playerName == "John Cena") {
+        playerAttack = 30;
+    } else {
     playerAttack = Math.floor(Math.random() * 11) + 20;
+    }
     oppMove();
     battle();
     update();
@@ -56,7 +82,11 @@ function normalAttack() {
 }
 
 function specialAttack() {
+    if (playerName == "John Cena") {
+        playerAttack = 50;
+    } else {
     playerAttack = Math.floor(Math.random() * 50) + 1;
+    }
     oppMove();
     battle();
     update();
