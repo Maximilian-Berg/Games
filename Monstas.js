@@ -40,7 +40,8 @@ function oppMove() {
 function reset() {
     playerHealth = 100;
     enemyHealth = 100;
-    document.getElementById("heroName").innerHTML = "Hero";
+    playerName = "Hero";
+    document.getElementById("heroName").innerHTML = playerName;
     document.getElementById("changeButton").style.display="inline";
     document.getElementById("heroName").style.marginLeft="170px";
     update();
