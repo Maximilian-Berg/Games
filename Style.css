@@ -18,6 +18,7 @@ h1 {
     font-family: "Comic Sans MS";
     border: 20px solid #e2f700;
     margin: auto;
+    margin-bottom: 20px;
 }
 
 img {
@@ -194,4 +195,8 @@ img {
     color: #000000;
     font-size: 15px;
     margin-bottom: 10px;
+}
+
+#gemes {
+    margin-bottom: 50px;
 }

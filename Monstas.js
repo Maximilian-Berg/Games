@@ -40,6 +40,9 @@ function oppMove() {
 function reset() {
     playerHealth = 100;
     enemyHealth = 100;
+    document.getElementById("heroName").innerHTML = "Hero";
+    document.getElementById("changeButton").style.display="inline";
+    document.getElementById("heroName").style.marginLeft="170px";
     update();
 }
  
@@ -69,9 +72,9 @@ function battle() {
 function evaluate() {
     if (playerHealth <= 0 || enemyHealth <= 0) {
         if (enemyHealth >= playerHealth) {
-            alert("Boooooo! You fucking suck! Also, you lost.");
+            alert("You lost! Booooo!");
         } else {
-            alert("Hoooora! You're great! Also, you won.");
+            alert("You Win! Hoora!");
         }
         reset();
     }
