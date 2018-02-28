@@ -12,18 +12,26 @@
         <div id="main">
             <div class="entity" id="hero">
                 <div class="entitySpace"></div>
-                <h3 class="named" id="heroName">---</h3>
+                <h3 class="named" id="heroName">Hero</h3>
                 <button id="changeButton" onclick="rename()">Change your name</button>
                 <img src="hero.png"/>
                 <h3 class="health" id="heroHealth">100</h3>
                 <progress class="healthBar" id="heroBar" max="100" value="100"></progress>
+                <div class="entitySpace"></div>
+                <button class="attackButton" onclick="normalAttack()">Normal Attacc (20 - 30)</button>
+                <br/>
+                <button class="attackButton" onclick="specialAttack()">Speshal Attacc (1 - 50)</button>
             </div>
             <div class="entity" id="enemy">
                 <div class="entitySpace"></div>
                 <h3 class="named">Anjanath</h3>
                 <img id="Anjie" src="Anjanath.png"/>
-                <h3 class="health" id="enemyHealth">500</h3>
-                <progress class="healthBar" id="enemyBar" max="500" value="500"></progress>
+                <h3 class="health" id="enemyHealth">100</h3>
+                <progress class="healthBar" id="enemyBar" max="100" value="100"></progress>
+                <div class="entitySpace"></div>
+                <button class="greyButton">Normal Attacc (20 - 30)</button>
+                <br/>
+                <button class="greyButton">Speshal Attacc (1 - 50)</button>
             </div>
         </div>
     </body>
