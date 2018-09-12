@@ -1,4 +1,4 @@
-var playerName;
+var playerName = "Hero";
 var playerHealth = 100;
 var enemyHealth = 100;
 var playerAttack;
@@ -26,9 +26,9 @@ function update() {
 
 function announce() {
     if (playerName == "John Cena") {
-        alert("You unleash a devestating blow and deal "+playerAttack+" damage!")
+        alert("John Cena unleashes a devestating blow and deal "+playerAttack+" damage!")
     } else {
-    alert("You attacked and dealt " + playerAttack + " damage!");
+    alert(playerName + " attacked and dealt " + playerAttack + " damage!");
     }
     if (playerName == "John Cena" && enemySuicide == 0) {
         alert("The Monster cowers in fear and does not attack.")
